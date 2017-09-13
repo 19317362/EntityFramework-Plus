@@ -7,7 +7,7 @@
 
 using System;
 using System.Collections.Generic;
-#if EF5 
+#if EF5
 using System.Data.Entity;
 using System.Data.Objects;
 using System.Reflection;
@@ -38,7 +38,7 @@ namespace Z.EntityFramework.Plus
 
             try
             {
-#if !NETSTANDARD1_3
+#if !NETSTANDARD1_3 && !NETSTANDARD2_0
                 CreatedBy = System.Threading.Thread.CurrentPrincipal.Identity.Name;
 #endif
 
